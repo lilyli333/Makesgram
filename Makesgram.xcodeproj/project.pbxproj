@@ -23,6 +23,12 @@
 		8256C3FE1EFD8FAC004934CF /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8256C3FD1EFD8FAC004934CF /* FindFriendsViewController.swift */; };
 		8256C4021EFD996C004934CF /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8256C4011EFD996C004934CF /* MainTabBarController.swift */; };
 		82F80C551EFDCE43006224A7 /* MGPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F80C541EFDCE43006224A7 /* MGPhotoHelper.swift */; };
+		82F80C571EFE16A2006224A7 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F80C561EFE16A2006224A7 /* StorageService.swift */; };
+		82F80C591EFE18DA006224A7 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F80C581EFE18DA006224A7 /* PostService.swift */; };
+		82F80C5B1EFE2102006224A7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F80C5A1EFE2102006224A7 /* Post.swift */; };
+		82F80C5F1F017A3A006224A7 /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F80C5E1F017A3A006224A7 /* UIImage+Size.swift */; };
+		82F80C611F017CB4006224A7 /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F80C601F017CB4006224A7 /* StorageReference+Post.swift */; };
+		82F80C631F018722006224A7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82F80C621F018722006224A7 /* Home.storyboard */; };
 		B33FF91EA1D5082C001981A3 /* Pods_Makesgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29F6C50C5028E7D5973F18 /* Pods_Makesgram.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +54,12 @@
 		8256C3FD1EFD8FAC004934CF /* FindFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindFriendsViewController.swift; path = Controllers/FindFriendsViewController.swift; sourceTree = "<group>"; };
 		8256C4011EFD996C004934CF /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = Controllers/MainTabBarController.swift; sourceTree = "<group>"; };
 		82F80C541EFDCE43006224A7 /* MGPhotoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MGPhotoHelper.swift; path = Helpers/MGPhotoHelper.swift; sourceTree = "<group>"; };
+		82F80C561EFE16A2006224A7 /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StorageService.swift; path = Makesgram/Services/StorageService.swift; sourceTree = "<group>"; };
+		82F80C581EFE18DA006224A7 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostService.swift; path = Makesgram/Services/PostService.swift; sourceTree = "<group>"; };
+		82F80C5A1EFE2102006224A7 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Makesgram/Models/Post.swift; sourceTree = "<group>"; };
+		82F80C5E1F017A3A006224A7 /* UIImage+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Size.swift"; path = "Extensions/UIImage+Size.swift"; sourceTree = "<group>"; };
+		82F80C601F017CB4006224A7 /* StorageReference+Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StorageReference+Post.swift"; path = "Extensions/StorageReference+Post.swift"; sourceTree = "<group>"; };
+		82F80C621F018722006224A7 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Storyboards/Home.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +134,7 @@
 			children = (
 				8256C3E01EFC33AC004934CF /* Login.storyboard */,
 				8256C3D61EFC3065004934CF /* Main.storyboard */,
+				82F80C621F018722006224A7 /* Home.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -141,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				8256C3E61EFC600F004934CF /* User.swift */,
+				82F80C5A1EFE2102006224A7 /* Post.swift */,
 			);
 			name = Models;
 			path = ..;
@@ -150,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				8256C3F11EFD735C004934CF /* UserService.swift */,
+				82F80C561EFE16A2006224A7 /* StorageService.swift */,
+				82F80C581EFE18DA006224A7 /* PostService.swift */,
 			);
 			name = Services;
 			path = ..;
@@ -159,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				8256C3F91EFD879C004934CF /* Storyboard+Utility.swift */,
+				82F80C5E1F017A3A006224A7 /* UIImage+Size.swift */,
+				82F80C601F017CB4006224A7 /* StorageReference+Post.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -245,6 +263,7 @@
 				821EC5171EFC2A2400F3632A /* Assets.xcassets in Resources */,
 				8256C3DB1EFC3065004934CF /* Main.storyboard in Resources */,
 				8256C3DA1EFC3065004934CF /* LaunchScreen.storyboard in Resources */,
+				82F80C631F018722006224A7 /* Home.storyboard in Resources */,
 				8256C3E11EFC33AC004934CF /* Login.storyboard in Resources */,
 				8256C3D81EFC3065004934CF /* GoogleService-Info.plist in Resources */,
 			);
@@ -306,14 +325,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8256C3E71EFC600F004934CF /* User.swift in Sources */,
+				82F80C571EFE16A2006224A7 /* StorageService.swift in Sources */,
 				8256C3E51EFC35F6004934CF /* LoginViewController.swift in Sources */,
 				8256C4021EFD996C004934CF /* MainTabBarController.swift in Sources */,
 				8256C3F21EFD735C004934CF /* UserService.swift in Sources */,
+				82F80C5B1EFE2102006224A7 /* Post.swift in Sources */,
+				82F80C5F1F017A3A006224A7 /* UIImage+Size.swift in Sources */,
 				8256C3FC1EFD8F93004934CF /* HomeViewController.swift in Sources */,
 				82F80C551EFDCE43006224A7 /* MGPhotoHelper.swift in Sources */,
 				8256C3FA1EFD879C004934CF /* Storyboard+Utility.swift in Sources */,
 				8256C3FE1EFD8FAC004934CF /* FindFriendsViewController.swift in Sources */,
+				82F80C611F017CB4006224A7 /* StorageReference+Post.swift in Sources */,
 				8256C3F71EFD8690004934CF /* Constants.swift in Sources */,
+				82F80C591EFE18DA006224A7 /* PostService.swift in Sources */,
 				8256C3ED1EFC8049004934CF /* CreateUsernameViewController.swift in Sources */,
 				821EC5101EFC2A2400F3632A /* AppDelegate.swift in Sources */,
 			);
