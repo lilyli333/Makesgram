@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Find Frinds-->
+        <!--Find Friends-->
         <scene sceneID="vOW-90-UhZ">
             <objects>
                 <viewController id="tpE-Wj-ga9" customClass="FindFriendsViewController" customModule="Makesgram" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,13 +32,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="70.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keg-qb-Fb4">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="username" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keg-qb-Fb4">
                                                     <rect key="frame" x="15" y="0.0" width="223" height="70.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdj-V3-AxU">
+                                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="followButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdj-V3-AxU">
                                                     <rect key="frame" x="250" y="10" width="115" height="50.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="115" id="uiW-Rs-acP"/>
@@ -46,7 +46,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <state key="normal" title="Follow"/>
                                                     <connections>
-                                                        <action selector="followButtonTapped:" destination="K9n-Nt-6cr" eventType="touchUpInside" id="Wwx-W3-3ck"/>
+                                                        <action selector="followButtonTapped:" destination="K9n-Nt-6cr" eventType="touchUpInside" id="h8q-4f-kQx"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -61,8 +61,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="followButton" destination="fdj-V3-AxU" id="hQ1-gP-tnG"/>
-                                            <outlet property="usernameLabel" destination="keg-qb-Fb4" id="7pr-Hq-0pW"/>
+                                            <outlet property="followButton" destination="fdj-V3-AxU" id="gg9-e8-5Dr"/>
+                                            <outlet property="usernameLabel" destination="keg-qb-Fb4" id="t0K-bm-Ad5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -79,9 +79,9 @@
                             <constraint firstItem="3Oh-im-iOS" firstAttribute="leading" secondItem="nLG-eg-eGy" secondAttribute="leading" id="vmu-5O-TYE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Find Frinds" id="ViP-1B-T3U"/>
+                    <navigationItem key="navigationItem" title="Find Friends" id="ViP-1B-T3U"/>
                     <connections>
-                        <outlet property="tableView" destination="3Oh-im-iOS" id="qvM-NU-8lv"/>
+                        <outlet property="tableView" destination="3Oh-im-iOS" id="ZcD-1I-Ebu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbh-lg-dkF" userLabel="First Responder" sceneMemberID="firstResponder"/>

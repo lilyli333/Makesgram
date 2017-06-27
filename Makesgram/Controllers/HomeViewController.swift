@@ -24,9 +24,10 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureTableView()
         
-        UserService.posts(for: User.current) { (posts) in
+        UserService.timeline { (posts) in
             self.posts = posts
             self.tableView.reloadData()
         }
@@ -70,10 +71,11 @@ extension HomeViewController: UITableViewDataSource {
         default:
             fatalError("Error: unexpected indexPath.")
         }
-    }    
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return posts.count
     }
+    
     func configureCell(_ cell: PostActionCell, with post: Post) {
         cell.timeAgoLabel.text = timestampFormatter.string(from: post.creationDate)
         cell.likeButton.isSelected = post.isLiked
@@ -84,20 +86,22 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
-            case 0:
+        case 0:
             return PostHeaderCell.height
             
-            case 1:
+        case 1:
             let post = posts[indexPath.section]
             return post.imageHeight
             
-            case 2:
+        case 2:
             return PostActionCell.height
             
-            default:
+        default:
             fatalError()
         }    }
 }
+
+
 
 extension HomeViewController: PostActionCellDelegate {
     func didTapLikeButton(_ likeButton: UIButton, on cell: PostActionCell) {
