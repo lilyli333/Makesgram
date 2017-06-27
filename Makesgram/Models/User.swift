@@ -11,6 +11,9 @@ import FirebaseDatabase.FIRDataSnapshot
 
 
 class User: NSObject {
+    
+    var isFollowed = false
+
     // MARK: - Singleton
     private static var _current: User?
     static var current: User {
