@@ -15,14 +15,15 @@ struct LikeService {
         guard let key = post.key else { return success(false)}
         let currentUID = User.current.uid
         
-        //ADD CODE TO LIKE POST (LATER)!
-        let likesRef = Database.database().reference().child("postLikes").child(key).child(currentUID)
+        //let likesRef = Database.database().reference().child("postLikes").child(key).child(currentUID)
+        let likesRef = DatabaseReference.toLocation(.likes(postKey: key, currentID: currentUID))
         likesRef.setValue(true) { (error, _) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
                 return success(false)
             }
-            let likeCountRef = Database.database().reference().child("posts").child(post.poster.uid).child(key).child("like_count")
+            let likeCountRef = DatabaseReference.toLocation(.likesCount(posterUID: post.poster.uid, postKey: key))
+            //let likeCountRef = Database.database().reference().child("posts").child(post.poster.uid).child(key).child("like_count")
             likeCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
                 let currentCount = mutableData.value as? Int ?? 0
                 mutableData.value = currentCount + 1
@@ -42,14 +43,15 @@ struct LikeService {
         guard let key = post.key else { return success (false) }
         let currentUID = User.current.uid
         
-        //CODE TO UNLIKE POST
-        let likesRef = Database.database().reference().child("postLikes").child(key).child(currentUID)
+        let likesRef = DatabaseReference.toLocation(.likes(postKey: key, currentID: currentUID))
+        //let likesRef = Database.database().reference().child("postLikes").child(key).child(currentUID)
         likesRef.setValue(nil) { (error, _) in
             if let error = error{
                 assertionFailure(error.localizedDescription)
                 return success(false)
             }
-            let likeCountRef = Database.database().reference().child("posts").child(post.poster.uid).child(key).child("like_count")
+            let likeCountRef = DatabaseReference.toLocation(.likesCount(posterUID: post.poster.uid, postKey: key))
+            //let likeCountRef = Database.database().reference().child("posts").child(post.poster.uid).child(key).child("like_count")
             likeCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
                 let currentCount = mutableData.value as? Int ?? 0
                 mutableData.value = currentCount - 1
