@@ -9,8 +9,7 @@
 import Foundation
 import FirebaseDatabase
 
-struct FollowService{
-    
+struct FollowService {
     private static func followUser(_ user: User, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
         let currentUID = User.current.uid
         let followData = ["followers/\(user.uid)/\(currentUID)" : true,
@@ -23,29 +22,23 @@ struct FollowService{
                 success(false)
             }
             
-            // 1
             UserService.posts(for: user) { (posts) in
-                // 2
                 let postKeys = posts.flatMap { $0.key }
                 
-                // 3
                 var followData = [String : Any]()
                 let timelinePostDict = ["poster_uid" : user.uid]
                 postKeys.forEach { followData["timeline/\(currentUID)/\($0)"] = timelinePostDict }
                 
-                // 4
                 ref.updateChildValues(followData, withCompletionBlock: { (error, ref) in
                     if let error = error {
                         assertionFailure(error.localizedDescription)
                     }
                     
-                    // 5
                     success(error == nil)
                 })
             }
         }
     }
-    
     private static func unfollowUser(_ user: User, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
         let currentUID = User.current.uid
         // Use NSNull() object instead of nil because updateChildValues expects type [Hashable : Any]
@@ -77,8 +70,7 @@ struct FollowService{
                 })
             })
         }
-    }
-    
+    }    
     static func setIsFollowing(_ isFollowing: Bool, fromCurrentUserTo followee: User, success: @escaping (Bool) -> Void) {
         if isFollowing {
             followUser(followee, forCurrentUserWithSuccess: success)
@@ -86,7 +78,6 @@ struct FollowService{
             unfollowUser(followee, forCurrentUserWithSuccess: success)
         }
     }
-    
     
     static func isUserFollowed(_ user: User, byCurrentUserWithCompletion completion: @escaping (Bool) -> Void) {
         let currentUID = User.current.uid

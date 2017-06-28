@@ -36,7 +36,6 @@ class FindFriendsViewController: UIViewController {
 
 extension FindFriendsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(users.count)
         return users.count
     }
     

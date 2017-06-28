@@ -76,7 +76,6 @@ struct UserService {
     
     static func usersExcludingCurrentUser(completion: @escaping ([User]) -> Void) {
         let currentUser = User.current
-        
         let ref = Database.database().reference().child("user")
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -103,22 +102,22 @@ struct UserService {
             })
         })
     }
-    
     static func followers(for user: User, completion: @escaping ([String]) -> Void) {
-    
         let followersRef = Database.database().reference().child("followers").child(user.uid)
+        
         followersRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let followersDict = snapshot.value as? [String: Bool] else {
-                return completion ([])
+            guard let followersDict = snapshot.value as? [String : Bool] else {
+                return completion([])
             }
+            
             let followersKeys = Array(followersDict.keys)
             completion(followersKeys)
         })
     }
     
     static func timeline(completion: @escaping ([Post]) -> Void) {
-    
         let currentUser = User.current
+        
         let timelineRef = Database.database().reference().child("timeline").child(currentUser.uid)
         timelineRef.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
@@ -132,7 +131,8 @@ struct UserService {
                 guard let postDict = postSnap.value as? [String : Any],
                     let posterUID = postDict["poster_uid"] as? String
                     else { continue }
-                
+                print(postDict)
+
                 dispatchGroup.enter()
                 
                 PostService.show(forKey: postSnap.key, posterUID: posterUID) { (post) in
@@ -148,7 +148,5 @@ struct UserService {
                 completion(posts.reversed())
             })
         })
-    
     }
-    
 }
