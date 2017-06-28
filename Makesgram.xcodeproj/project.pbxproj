@@ -10,6 +10,7 @@
 		470528104923DB4F10DB0D76 /* Pods_Makesgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79AA618B675213B505EC3A36 /* Pods_Makesgram.framework */; };
 		8213A68B1F02F05600BFE5B1 /* FindFriends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8213A68A1F02F05600BFE5B1 /* FindFriends.storyboard */; };
 		8213A68D1F02F17100BFE5B1 /* FindFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8213A68C1F02F17100BFE5B1 /* FindFriendsCell.swift */; };
+		8213A68F1F04112F00BFE5B1 /* DatabaseReference+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8213A68E1F04112F00BFE5B1 /* DatabaseReference+Location.swift */; };
 		821EC5101EFC2A2400F3632A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EC50F1EFC2A2400F3632A /* AppDelegate.swift */; };
 		821EC5171EFC2A2400F3632A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821EC5161EFC2A2400F3632A /* Assets.xcassets */; };
 		8256C3D81EFC3065004934CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8256C3D31EFC3065004934CF /* GoogleService-Info.plist */; };
@@ -47,6 +48,7 @@
 		79AA618B675213B505EC3A36 /* Pods_Makesgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makesgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8213A68A1F02F05600BFE5B1 /* FindFriends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FindFriends.storyboard; path = Storyboards/FindFriends.storyboard; sourceTree = "<group>"; };
 		8213A68C1F02F17100BFE5B1 /* FindFriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindFriendsCell.swift; path = Views/FindFriendsCell.swift; sourceTree = "<group>"; };
+		8213A68E1F04112F00BFE5B1 /* DatabaseReference+Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DatabaseReference+Location.swift"; path = "Extensions/DatabaseReference+Location.swift"; sourceTree = "<group>"; };
 		821EC50C1EFC2A2400F3632A /* Makesgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makesgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		821EC50F1EFC2A2400F3632A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		821EC5161EFC2A2400F3632A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				8256C3F91EFD879C004934CF /* Storyboard+Utility.swift */,
 				82F80C5E1F017A3A006224A7 /* UIImage+Size.swift */,
 				82F80C601F017CB4006224A7 /* StorageReference+Post.swift */,
+				8213A68E1F04112F00BFE5B1 /* DatabaseReference+Location.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				82F80C551EFDCE43006224A7 /* MGPhotoHelper.swift in Sources */,
 				8256C3FA1EFD879C004934CF /* Storyboard+Utility.swift in Sources */,
 				8256C3FE1EFD8FAC004934CF /* FindFriendsViewController.swift in Sources */,
+				8213A68F1F04112F00BFE5B1 /* DatabaseReference+Location.swift in Sources */,
 				82F80C611F017CB4006224A7 /* StorageReference+Post.swift in Sources */,
 				8256C3F71EFD8690004934CF /* Constants.swift in Sources */,
 				82F80C591EFE18DA006224A7 /* PostService.swift in Sources */,

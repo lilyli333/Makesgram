@@ -16,7 +16,7 @@ struct PostService {
         let currentUser = User.current
         let post = Post(imageURL: urlString, imageHeight: aspectHeight)
         
-        let rootRef = Database.database().reference()
+        let rootRef = DatabaseReference.MGLocation.root.asDatabaseReference()
         let newPostRef = rootRef.child("posts").child(currentUser.uid).childByAutoId()
         let newPostKey = newPostRef.key
         
