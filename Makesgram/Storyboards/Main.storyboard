@@ -22,9 +22,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="Camera" image="camera" id="4VR-xU-6Ct">
-                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="-3"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="2"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="camera" id="4VR-xU-6Ct">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S6K-40-0BV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -43,7 +42,7 @@
                     <connections>
                         <segue destination="Bb3-ym-pMY" kind="relationship" relationship="viewControllers" id="rz0-G0-y3F"/>
                         <segue destination="ToQ-u1-DAp" kind="relationship" relationship="viewControllers" id="qod-Mh-EmS"/>
-                        <segue destination="GJa-Jb-yEx" kind="relationship" relationship="viewControllers" id="iGe-8Y-huF"/>
+                        <segue destination="SdP-jM-JEr" kind="relationship" relationship="viewControllers" id="Cfz-RQ-UmK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JXf-bl-UfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -60,15 +59,15 @@
             </objects>
             <point key="canvasLocation" x="391.19999999999999" y="-360.2698650674663"/>
         </scene>
-        <!--FindFriends-->
-        <scene sceneID="7J7-XN-mhr">
+        <!--Profile-->
+        <scene sceneID="upN-Vh-dWD">
             <objects>
-                <viewControllerPlaceholder storyboardName="FindFriends" id="GJa-Jb-yEx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7ee-Vb-wFR"/>
+                <viewControllerPlaceholder storyboardName="Profile" id="SdP-jM-JEr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="OYB-oG-3ru"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="11y-xF-c7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgn-9n-f9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="362" y="-503"/>
+            <point key="canvasLocation" x="501.60000000000002" y="-865.81709145427294"/>
         </scene>
     </scenes>
     <resources>

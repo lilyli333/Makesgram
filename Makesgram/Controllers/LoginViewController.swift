@@ -21,10 +21,8 @@ class LoginViewController: UIViewController {
         guard let authUI = FUIAuth.defaultAuthUI()
             else { return }
         
-        // 2
         authUI.delegate = self
         
-        // 3
         let authViewController = authUI.authViewController()
         present(authViewController, animated: true)
         
@@ -32,8 +30,8 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        loginButton.layer.cornerRadius = 6
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
 }

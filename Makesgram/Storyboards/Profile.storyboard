@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Atu-AC-dE4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="GXY-tb-Kxe">
+            <objects>
+                <viewController id="zZM-7c-Hhz" customClass="ProfileViewController" customModule="Makesgram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YJ9-hV-8i2"/>
+                        <viewControllerLayoutGuide type="bottom" id="kcs-YX-1sF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CYT-tt-MmI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5OY-YX-sNo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="084-dJ-hgZ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="thumbImageView" id="PI0-B2-Rgn" customClass="PostThumbImageCell" customModule="Makesgram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="124"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="124" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fU5-NC-6eb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="124" height="124"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="fU5-NC-6eb" firstAttribute="leading" secondItem="PI0-B2-Rgn" secondAttribute="leading" id="28y-aF-jP1"/>
+                                            <constraint firstItem="fU5-NC-6eb" firstAttribute="top" secondItem="PI0-B2-Rgn" secondAttribute="top" id="SSp-VM-gxJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="fU5-NC-6eb" secondAttribute="trailing" id="dZD-cV-aWU"/>
+                                            <constraint firstAttribute="bottom" secondItem="fU5-NC-6eb" secondAttribute="bottom" id="s7B-LV-zGh"/>
+                                        </constraints>
+                                        <size key="customSize" width="124" height="124"/>
+                                        <connections>
+                                            <outlet property="PostThumbImage" destination="fU5-NC-6eb" id="Tt2-3H-y8o"/>
+                                            <outlet property="postThumbImage" destination="fU5-NC-6eb" id="TLq-U8-cH0"/>
+                                            <outlet property="thumbImageView" destination="fU5-NC-6eb" id="sd2-Hy-pB3"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="5OY-YX-sNo" secondAttribute="bottom" id="628-36-JAL"/>
+                            <constraint firstItem="5OY-YX-sNo" firstAttribute="leading" secondItem="CYT-tt-MmI" secondAttribute="leading" id="FEv-PB-Bhy"/>
+                            <constraint firstAttribute="trailing" secondItem="5OY-YX-sNo" secondAttribute="trailing" id="PQq-SL-XKU"/>
+                            <constraint firstItem="5OY-YX-sNo" firstAttribute="top" secondItem="CYT-tt-MmI" secondAttribute="top" id="oqJ-bG-jq8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="BxZ-cW-lzx"/>
+                    <connections>
+                        <outlet property="collectionView" destination="5OY-YX-sNo" id="0Fo-tx-i6H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDW-KM-SPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1440.8" y="-865.81709145427294"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="UcS-FS-Rzl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Atu-AC-dE4" userLabel="Profile" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="profile" id="khT-jj-ldY">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Cff-W1-ANp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zZM-7c-Hhz" kind="relationship" relationship="rootViewController" id="rAO-ft-czc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DL2-BJ-No5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="501.60000000000002" y="-865.81709145427294"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="profile" width="25" height="25"/>
+    </resources>
+</document>

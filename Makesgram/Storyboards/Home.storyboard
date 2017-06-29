@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ovh-A3-wks" id="tDo-ZB-TLa">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYn-8P-iuj">
@@ -71,7 +71,7 @@
                                         <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="obi-Zk-6wD" id="qM0-bk-hL3">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fyj-uO-bRV" customClass="PostImageView">
@@ -93,7 +93,7 @@
                                         <rect key="frame" x="0.0" y="116" width="414" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zk3-cJ-srg" id="XYK-4G-WV3" customClass="PostActionCell" customModule="Makesgram" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Uq7-TQ-PMD" userLabel="Outer">
@@ -174,17 +174,16 @@
             </objects>
             <point key="canvasLocation" x="1328.985507246377" y="-360.32608695652175"/>
         </scene>
-        <!--Home-->
+        <!--Navigation Controller-->
         <scene sceneID="O9Q-8c-otH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZTe-od-yDk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="XgA-M3-Is1">
-                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="-3"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="2"/>
+                    <tabBarItem key="tabBarItem" title="" image="home" id="XgA-M3-Is1">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nax-Hj-cFV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Nax-Hj-cFV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

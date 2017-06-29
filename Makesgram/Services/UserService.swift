@@ -14,7 +14,10 @@ struct UserService {
     
     static func create(_ firUser: FIRUser, username: String, completion: @escaping(User?) -> Void) {
         
-        let userAttr = ["username": username]
+        let userAttr: [String: Any] = ["username": username,
+                        "follower_count": 0,
+                        "following_count": 0,
+                        "post_count": 0]
         let ref = DatabaseReference.toLocation(.showUser(uid: firUser.uid))
         //let ref = Database.database().reference().child("user").child(firUser.uid)
         ref.setValue(userAttr) { (error, ref) in
@@ -151,6 +154,17 @@ struct UserService {
             
             dispatchGroup.notify(queue: .main, execute: {
                 completion(posts.reversed())
+            })
+        })
+    }
+    
+    static func observeProfile(for user: User, completion: @escaping (DatabaseReference, User?, [Post]) -> Void) -> DatabaseHandle {
+        let userRef = DatabaseReference.toLocation(.showUser(uid: user.uid))
+        //let userRef = Database.database().reference().child("user").child(user.uid)
+        return userRef.observe(.value, with: { (snapshot) in
+            guard let user = User(snapshot: snapshot) else{ return completion(userRef, nil, []) }
+            posts(for: user, completion: { (posts) in
+                completion(userRef, user, posts)
             })
         })
     }
