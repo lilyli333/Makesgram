@@ -25,7 +25,7 @@ struct FollowService {
             let dispatchGroup = DispatchGroup()
             dispatchGroup.enter()
             
-            let followingCountRef = Database.database().reference().child("users").child(currentUID).child("following_count")
+            let followingCountRef = Database.database().reference().child("user").child(currentUID).child("following_count")
             followingCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
                 let currentCount = mutableData.value as? Int ?? 0
                 mutableData.value = currentCount + 1
@@ -33,7 +33,7 @@ struct FollowService {
             })
             
             dispatchGroup.enter()
-            let followerCountRef = Database.database().reference().child("users").child(user.uid).child("follower_count")
+            let followerCountRef = Database.database().reference().child("user").child(user.uid).child("follower_count")
             followerCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
                 let currentCount = mutableData.value as? Int ?? 0
                 mutableData.value = currentCount + 1
@@ -97,7 +97,7 @@ struct FollowService {
             
             dispatchGroup.enter()
             
-            let followingCountRef = Database.database().reference().child("users").child(currentUID).child("following_count")
+            let followingCountRef = Database.database().reference().child("user").child(currentUID).child("following_count")
             followingCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
                 let currentCount = mutableData.value as? Int ?? 0
                 mutableData.value = currentCount - 1
@@ -106,7 +106,7 @@ struct FollowService {
             })
             
             dispatchGroup.enter()
-            let followerCountRef = Database.database().reference().child("users").child(user.uid).child("follower_count")
+            let followerCountRef = Database.database().reference().child("user").child(user.uid).child("follower_count")
             followerCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
                 let currentCount = mutableData.value as? Int ?? 0
                 mutableData.value = currentCount - 1

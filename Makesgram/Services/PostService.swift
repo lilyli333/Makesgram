@@ -35,7 +35,7 @@ struct PostService {
             rootRef.updateChildValues(updatedData)
             
             rootRef.updateChildValues(updatedData, withCompletionBlock: { (error, ref) in
-                let postCountRef = Database.database().reference().child("users").child(currentUser.uid).child("post_count")
+                let postCountRef = Database.database().reference().child("user").child(currentUser.uid).child("post_count")
                 
                 postCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
                     let currentCount = mutableData.value as? Int ?? 0

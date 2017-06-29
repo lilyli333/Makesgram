@@ -47,7 +47,7 @@ extension DatabaseReference {
             case .likes(let postKey, let currentID):
                 return root.child("postLikes").child(postKey).child(currentID)
             case .likesCount(let posterUID, let postKey):
-                return root.child("posts").child(posterUID).child(postKey).child("likes_count")
+                return root.child("posts").child(posterUID).child(postKey).child("like_count")
             case .isLiked(let postKey):
                 return root.child("postLikes/\(postKey)")
             }

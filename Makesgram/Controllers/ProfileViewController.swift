@@ -27,4 +27,5 @@ extension ProfileViewController: UICollectionViewDataSource {
         cell.thumbImageView.backgroundColor = .red
         
         return cell
-    }}
+    }
+}
