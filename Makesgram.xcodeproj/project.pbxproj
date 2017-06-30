@@ -41,6 +41,7 @@
 		8256C3FC1EFD8F93004934CF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8256C3FB1EFD8F93004934CF /* HomeViewController.swift */; };
 		8256C3FE1EFD8FAC004934CF /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8256C3FD1EFD8FAC004934CF /* FindFriendsViewController.swift */; };
 		8256C4021EFD996C004934CF /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8256C4011EFD996C004934CF /* MainTabBarController.swift */; };
+		82830CF81F05C21900D797A8 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82830CF71F05C21900D797A8 /* ProfileHeaderView.swift */; };
 		82DDA0961F01D1C000848C91 /* PostActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DDA0951F01D1C000848C91 /* PostActionCell.swift */; };
 		82DDA0B91F02D3E500848C91 /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DDA0B81F02D3E500848C91 /* LikeService.swift */; };
 		82DDA0BB1F02E35000848C91 /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DDA0BA1F02E35000848C91 /* FollowService.swift */; };
@@ -96,6 +97,7 @@
 		8256C3FB1EFD8F93004934CF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		8256C3FD1EFD8FAC004934CF /* FindFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindFriendsViewController.swift; path = Controllers/FindFriendsViewController.swift; sourceTree = "<group>"; };
 		8256C4011EFD996C004934CF /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = Controllers/MainTabBarController.swift; sourceTree = "<group>"; };
+		82830CF71F05C21900D797A8 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileHeaderView.swift; path = Views/ProfileHeaderView.swift; sourceTree = "<group>"; };
 		82DDA0951F01D1C000848C91 /* PostActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostActionCell.swift; path = Views/PostActionCell.swift; sourceTree = "<group>"; };
 		82DDA0B81F02D3E500848C91 /* LikeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeService.swift; path = Makesgram/Services/LikeService.swift; sourceTree = "<group>"; };
 		82DDA0BA1F02E35000848C91 /* FollowService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowService.swift; path = Makesgram/Services/FollowService.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				82DDA0951F01D1C000848C91 /* PostActionCell.swift */,
 				8213A68C1F02F17100BFE5B1 /* FindFriendsCell.swift */,
 				8213A6BE1F05A49200BFE5B1 /* PostThumbImageCell.swift */,
+				82830CF71F05C21900D797A8 /* ProfileHeaderView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				82F80C5B1EFE2102006224A7 /* Post.swift in Sources */,
 				82F80C671F01B2B2006224A7 /* PostImageCell.swift in Sources */,
 				8213A6B51F059B2800BFE5B1 /* ProfileViewController.swift in Sources */,
+				82830CF81F05C21900D797A8 /* ProfileHeaderView.swift in Sources */,
 				8213A68D1F02F17100BFE5B1 /* FindFriendsCell.swift in Sources */,
 				82F80C5F1F017A3A006224A7 /* UIImage+Size.swift in Sources */,
 				8256C3FC1EFD8F93004934CF /* HomeViewController.swift in Sources */,

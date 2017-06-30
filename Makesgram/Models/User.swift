@@ -45,7 +45,7 @@ class User: NSObject {
             let username = dict["username"] as? String,
             let followerCount = dict["follower_count"] as? Int,
             let followingCount = dict["following_count"] as? Int,
-            let postCount = dict["post_count"] as? Int
+            let postCounts = dict["post_count"] as? Int
             else {
                 return nil}
         
@@ -53,7 +53,7 @@ class User: NSObject {
         self.username = username
         self.followerCount = followerCount
         self.followingCount = followingCount
-        self.postCount = postCount
+        self.postCount = postCounts
         super.init()
     }
     
@@ -61,7 +61,7 @@ class User: NSObject {
         guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
             let username = aDecoder.decodeObject(forKey: Constants.UserDefaults.username) as? String
             else { return nil }
-        
+        self.postCount = 0
         self.uid = uid
         self.username = username
         
